@@ -1,5 +1,18 @@
-# Semver to value plugin
+# mysql-semver-value
+- Convert semantic version value into comparison and order compatible string.
+- Supporting values from '0' to '4294967295.4294967295.4294967295.4294967295'
 
+## fn semver_value
+```shell
+semver_value(version: str, segments: int)
+```
+**params:**
+- version: string, not null. Each segment can represent up to uint32 value
+- segments: number of segments in version string. Support values between 1 and 4
+- *working prototype in development stage
+ 
+** returns:**
+- VARBINARY(28) representing string of 39 length
 
 ## register plugin
 1. build plugin from source code:
